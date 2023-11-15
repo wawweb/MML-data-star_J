@@ -1,0 +1,119 @@
+html {
+    width: 100%;
+    height: 100%;
+
+    body {
+        width: 100%;
+        height: auto;
+        position: relative;
+        // overflow: hidden;
+
+        @import "./header";
+        @import "./main";
+        @import "./footer";
+        @import "./aside";
+        @import "./popup";
+
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -999;
+
+            &.img {
+                background: url("../img/bg.png")no-repeat top left;
+                background-size: cover;
+            }
+
+
+
+            &.decorate--01 {
+                background: url("../img/decorate--01.png")no-repeat center;
+                animation: rotate--01 20s linear 0s alternate-reverse infinite forwards;
+                width: 1262px;
+                height: 761px;
+                top: -128px;
+                left: 323px;
+
+                @keyframes rotate--01 {
+                    0% {
+                        transform: rotate3d(0);
+                    }
+
+                    100% {
+                        transform: rotate3d(1, -1, 1, 60deg);
+                    }
+                }
+            }
+
+            &.decorate--02 {
+                background: url("../img/decorate--02.png")no-repeat top left;
+                animation: rotate--02 20s linear 0s alternate infinite forwards;
+
+                @keyframes rotate--02 {
+                    0% {
+                        transform-origin: 948px 260px;
+                    }
+
+                    100% {
+                        transform-origin: 948px 260px;
+                        transform: rotate3d(1, -1, 1, 60deg);
+                    }
+                }
+            }
+
+            &.decorate--03 {
+                background: url("../img/decorate--03.png")no-repeat center;
+                animation: rotate--03 20s ease-in-out alternate 0s infinite forwards;
+                width: 1625px;
+                height: 964px;
+                top: -220px;
+                left: 138px;
+
+                @keyframes rotate--03 {
+                    0% {
+                        transform: rotate3d(0);
+                    }
+
+                    100% {
+                        transform: rotate3d(-1, -1, 0, 90deg);
+                    }
+                }
+            }
+
+            &.decorate--04 {
+                background: url("../img/decorate--04.png")no-repeat center;
+                width: 2000px;
+                height: 1205px;
+                top: -355px;
+                left: -22px;
+                animation: rotate--04 20s ease-in-out alternate 0s infinite forwards;
+
+                @keyframes rotate--04 {
+                    0% {
+                        transform: rotate3d(0);
+                    }
+
+                    100% {
+                        transform: rotate3d(1, -1, 0, 90deg);
+                    }
+                }
+            }
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particule {
+            position: absolute;
+        }
+    }
+}
