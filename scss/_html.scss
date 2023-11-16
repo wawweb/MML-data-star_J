@@ -6,7 +6,7 @@ html {
         width: 100%;
         height: auto;
         position: relative;
-        // overflow: hidden;
+        overflow-x: hidden;
 
         @import "./header";
         @import "./main";
